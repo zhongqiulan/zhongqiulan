@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-multiselect@2.1.0"></script>
+  <link rel="stylesheet" href="https://unpkg.com/vue-multiselect@2.1.0/dist/vue-multiselect.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+  * {
+  font-family: 'Lato', 'Avenir', sans-serif;
+}
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <multiselect 
+      v-model="value" 
+      :options="options"
+      :multiple="true"
+      :taggable="true"
+      :searchable="true"
+   
+      >
+    </multiselect>
+  
+  </div>
+  <script>
+  new Vue({
+	components: {
+  	Multiselect: window.VueMultiselect.default
+	},
+	data: {
+  	value: ['Vue-Multiselect'],
+  	options: ['Vue.js', 'Vue-Multiselect', 'Vuelidate','Vuelidate1','Vuelidate2']
+	},
+  methods: {
+  	addLibrary(lib) {
+    	this.options.push(lib)
+      this.value.push(lib)
+    }
+  }
+}).$mount('#app')
+
+  </script>
+</body>
+
+</html>

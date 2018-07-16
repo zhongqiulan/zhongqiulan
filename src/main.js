@@ -6,6 +6,8 @@ import router from './router'
 import i18n from './i18n/i18n'
 // import Vuex from 'vuex'
 import store from './store'
+import Multiselect from "vue-multiselect";
+Vue.component('multiselect', Multiselect)
 // 设置为 false 以阻止 vue 在启动时生成生产提示
 Vue.config.productionTip = false
 /* eslint-disable*/
